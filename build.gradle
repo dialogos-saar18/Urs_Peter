@@ -1,0 +1,34 @@
+plugins {
+  id 'java'
+  id 'maven'
+  id 'application'
+  id 'maven-publish' // to provide "gradlew publishToMavenLocal"
+}
+
+repositories {
+  jcenter()
+  maven { url "https://jitpack.io" }
+  mavenLocal()
+}
+
+dependencies {
+  implementation 'org.python:jython-standalone:2.7.1'
+  implementation(group:'com.github.dialogos-project', name:'dialogos',  version:'2.0.2')
+}
+
+mainClassName = 'com.clt.dialogos.DialogOS'
+version = '2.0.3'
+
+
+// configuration for maven-publish plugin
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.dialogos-project'
+            artifactId = 'jython_plugin'
+            version = '1.0'
+
+            from components.java
+        }
+    }
+}
