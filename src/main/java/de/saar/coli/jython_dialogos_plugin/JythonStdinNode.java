@@ -15,8 +15,8 @@ public class JythonStdinNode extends JythonInputNodeAdapter {
     public JythonStdinNode() {
         super("jython.input_node", "JythonStdinInputNode");
     }
-    
+
     public static String getNodeTypeName(Class<?> c) {
-        return "Jython Stdin Input";
+        return "Jython Stdinput";
     }
 }
