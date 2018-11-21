@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wizard SYSTEM "Wizard.dtd">
+
+<wizard>
+	<plugin type="de.saar.coli.jython_dialogos_plugin">
+	</plugin>
+	<plugin type="dialogos.plugin.sphinx">
+		<att name="language" type="string" value="de_DE"/>
+	</plugin>
+	<plugin type="dialogos.plugin.tts">
+	</plugin>
+	<graph directed="1" Graphic="1" Layout="points">
+		<att name="width" type="integer" value="750"/>
+		<att name="height" type="integer" value="540"/>
+		<groovyFunctions></groovyFunctions>
+		<node uid="60811b6c-4cf7-4371-9a5d-6969a03db4b6" class="de.saar.coli.jython_dialogos_plugin.JythonStdoutNode">
+			<graphics x="339" y="200" fill="#00b200"/>
+			<att name="title" type="string" value="Jython Stdout Output"/>
+			<att name="prompt" type="text">
+				<value>hallo</value>
+			</att>
+			<att name="prompt_type" type="string" value="text"/>
+			<att name="wait" type="boolean" value="1"/>
+		</node>
+		<node uid="79b5092f-53a2-45bc-952e-05a2e666f255" class="com.clt.diamant.graph.nodes.EndNode">
+			<graphics x="412" y="309" fill="#9999ff"/>
+			<att name="title" type="string" value="End"/>
+		</node>
+		<node uid="97952666-04f1-44e7-8d66-fa371244983f" class="com.clt.diamant.graph.nodes.StartNode">
+			<graphics x="370" y="40" fill="#9999ff"/>
+			<att name="title" type="string" value="Start"/>
+		</node>
+		<node uid="aac18475-b68c-4292-ac1e-b9a2a7a14c69" class="de.saar.coli.jython_dialogos_plugin.JythonTestNode">
+			<graphics x="385" y="116" fill="#c0c0c0"/>
+			<att name="title" type="string" value="Jython Test"/>
+		</node>
+		<edge src="60811b6c-4cf7-4371-9a5d-6969a03db4b6" tgt="79b5092f-53a2-45bc-952e-05a2e666f255">
+		</edge>
+		<edge src="97952666-04f1-44e7-8d66-fa371244983f" tgt="aac18475-b68c-4292-ac1e-b9a2a7a14c69">
+		</edge>
+		<edge src="aac18475-b68c-4292-ac1e-b9a2a7a14c69" tgt="60811b6c-4cf7-4371-9a5d-6969a03db4b6">
+		</edge>
+	</graph>
+</wizard>
