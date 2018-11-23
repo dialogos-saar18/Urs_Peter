@@ -83,10 +83,10 @@ public class JythonDialogosPlugin implements Plugin {
             @Override
             protected PluginRuntime createRuntime(Component cmpnt) throws Exception {
                 return () -> {
-                    
+
                 };
             }
         };
     }
-    
+
 }
